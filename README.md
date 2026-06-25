@@ -29,30 +29,35 @@ SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
 MAINNET_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY
 ```
 ### Load ENV variables
+```shell
 source .env
-
+```
 ### Fork test run
 ### Sepolia fork
+```shell
 forge test --fork-url $SEPOLIA_RPC_URL
-
+```
 ### Mainnet fork
+```shell
 forge test --fork-url $MAINNET_RPC_URL
-
-### Verbose output එක්ක (debug/trace logs බලන්න)
+```
+### Verbose output එක්ක (debug/trace logs )
+```shell
 forge test --fork-url $SEPOLIA_RPC_URL -vvv
-
+```
 ### Specific test එකක් විතරක් run කරන්න
+```shell
 forge test --fork-url $SEPOLIA_RPC_URL --match-test testPriceFeedVersionIsAccurate -vvv
-
+```
 ## Full Flow
-
+```shell
 1. forge clean / forge build           → compile 
 2. forge test                          → local test (price feed test fail වෙයි)
 3. source .env                         → RPC URLs load 
 4. forge test --fork-url $SEPOLIA_RPC_URL -vvv    → Sepolia state, fork and test
 5. forge test --fork-url $MAINNET_RPC_URL -vvv    → Mainnet state, fork and test
 6. forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key <key> --broadcast   → actual deploy (real testnet ETH ඕනේ)
-
+```
 ```shell
 forge test
     │
