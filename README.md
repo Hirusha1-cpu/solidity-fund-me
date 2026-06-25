@@ -15,13 +15,13 @@ Foundry consists of:
 ### But have to fund minimum 5 (≥ $5) Dollers.
 ### We use chainlink price feeds  (real-world ETH/USD price oracle) for calculate price conversions.
 ### The collected funds can be withdraw only by owner.
-
+```shell
 1️⃣ src/PriceConverter.sol — Price Calculation Library
 2️⃣ src/FundMe.sol — Main Contract 
 3️⃣ script/HelperConfig.s.sol — Network Detection Logic (Core!)
 4️⃣ script/DeployFundMe.s.sol — Deployment Script
 5️⃣ test/FundMeTest.t.sol — Tests
-
+```
 ## How to setup
 
 ### Add to .ENV
@@ -53,6 +53,7 @@ forge test --fork-url $SEPOLIA_RPC_URL --match-test testPriceFeedVersionIsAccura
 5. forge test --fork-url $MAINNET_RPC_URL -vvv    → Mainnet state, fork and test
 6. forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key <key> --broadcast   → actual deploy (real testnet ETH ඕනේ)
 
+```shell
 forge test
     │
     ▼
@@ -81,7 +82,7 @@ FundMe Contract Deployment
     │
     ▼
 Tests Execute Against Deployed Contract
-
+```
 
 
 ## Commands
