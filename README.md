@@ -24,9 +24,10 @@ Foundry consists of:
 ## How to setup
 
 ### Add to .ENV
+```shell
 SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
 MAINNET_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY
-
+```
 ### Load ENV variables
 source .env
 
@@ -85,9 +86,10 @@ Tests Execute Against Deployed Contract
 
 
 ## Commands
-
+```shell
 forge test --fork-url $SEPOLIA_RPC_URL
 forge test --fork-url $MAINNET_RPC_URL
+```
 
 ## Documentation
 
