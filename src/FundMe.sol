@@ -58,6 +58,8 @@ contract FundMe {
         s_funders.push(msg.sender);
     }
 
+    
+
     // aderyn-ignore-next-line(centralization-risk,unused-public-function,state-change-without-event))
     function withdraw() public onlyOwner {
         // aderyn-ignore-next-line(storage-array-length-not-cached,costly-loop)
