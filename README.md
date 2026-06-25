@@ -11,10 +11,10 @@ Foundry consists of:
 
 ## CROWDFUNDING SMARTCONTRACT
 
-# This is decetralized Crowdfunding Contract Project. Anyone can be fund the ETH into this contract.
-# But have to fund minimum 5 (≥ $5) Dollers.
-# We use chainlink price feeds  (real-world ETH/USD price oracle) for calculate price conversions.
-# The collected funds can be withdraw only by owner.
+### This is decetralized Crowdfunding Contract Project. Anyone can be fund the ETH into this contract.
+### But have to fund minimum 5 (≥ $5) Dollers.
+### We use chainlink price feeds  (real-world ETH/USD price oracle) for calculate price conversions.
+### The collected funds can be withdraw only by owner.
 
 1️⃣ src/PriceConverter.sol — Price Calculation Library
 2️⃣ src/FundMe.sol — Main Contract 
@@ -24,24 +24,24 @@ Foundry consists of:
 
 ## How to setup
 
-# Add to .ENV
+### Add to .ENV
 SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
 MAINNET_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY
 
-# Load ENV variables
+### Load ENV variables
 source .env
 
-# Fork test run
-# Sepolia fork
+### Fork test run
+### Sepolia fork
 forge test --fork-url $SEPOLIA_RPC_URL
 
-# Mainnet fork
+### Mainnet fork
 forge test --fork-url $MAINNET_RPC_URL
 
-# Verbose output එක්ක (debug/trace logs බලන්න)
+### Verbose output එක්ක (debug/trace logs බලන්න)
 forge test --fork-url $SEPOLIA_RPC_URL -vvv
 
-# Specific test එකක් විතරක් run කරන්න
+### Specific test එකක් විතරක් run කරන්න
 forge test --fork-url $SEPOLIA_RPC_URL --match-test testPriceFeedVersionIsAccurate -vvv
 
 ## Full Flow
