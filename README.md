@@ -1,4 +1,4 @@
-## Foundry
+# Foundry Project - CROWDFUNDING SMARTCONTRACT
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
@@ -9,7 +9,6 @@ Foundry consists of:
 - **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
 - **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## CROWDFUNDING SMARTCONTRACT
 
 ### This is decetralized Crowdfunding Contract Project. Anyone can be fund the ETH into this contract.
 ### But have to fund minimum 5 (≥ $5) Dollers.
